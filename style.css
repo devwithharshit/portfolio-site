@@ -85,7 +85,11 @@ nav a:hover {
     letter-spacing: -5px;
 }
 
-.hero h1 em, .main-thought em, .currently em, .social-heading em, .contact h2 em {
+.hero h1 em,
+.main-thought em,
+.currently em,
+.social-heading em,
+.contact h2 em {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
 }
@@ -168,7 +172,9 @@ nav a:hover {
     gap: 90px;
 }
 
-.about h2, .projects h2, .social-heading h2 {
+.about h2,
+.projects h2,
+.social-heading h2 {
     margin-top: 18px;
     font-size: 58px;
     line-height: 1;
@@ -199,6 +205,10 @@ nav a:hover {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.currently {
+    padding: 120px 0 70px;
+}
+
 .currently h2 {
     max-width: 950px;
     margin-top: 18px;
@@ -222,29 +232,39 @@ nav a:hover {
 }
 
 .projects {
-    padding: 70px 0;
+    padding: 90px 0;
     background: #ebe9e3;
 }
 
 .projects-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
 .projects-heading > .label {
-    margin-right: auto;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .projects-heading > h2 {
-    margin-right: auto;
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 18px;
 }
 
 .projects-heading > p {
+    grid-column: 2;
+    grid-row: 1 / 3;
     max-width: 320px;
+    margin-left: auto;
+    align-self: end;
     margin-bottom: 5px;
     color: #666;
+}
+
+.project-list {
+    margin-top: 55px;
 }
 
 .project {
@@ -344,7 +364,8 @@ nav a:hover {
     color: white;
 }
 
-.social-card:hover > span, .social-card:hover p {
+.social-card:hover > span,
+.social-card:hover p {
     color: #aaa;
 }
 
@@ -373,7 +394,6 @@ nav a:hover {
     color: #aaa;
 }
 
-
 .email {
     display: inline-block;
     margin-top: 25px;
@@ -396,7 +416,8 @@ form label {
     font-size: 12px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 14px;
     border: 1px solid #555;
@@ -410,7 +431,8 @@ form textarea {
     resize: vertical;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     outline: 1px solid #aaa;
 }
 
@@ -467,17 +489,28 @@ footer {
         height: 270px;
     }
 
-    .about, .contact-grid {
+    .about,
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
 
-    .projects-heading, .social-heading {
+    .projects-heading,
+    .social-heading {
         display: block;
     }
 
-    .projects-heading > p, .social-heading p {
+    .projects-heading > p,
+    .social-heading p {
         margin-top: 25px;
+    }
+
+    .project-list {
+        margin-top: 45px;
+    }
+
+    .currently {
+        padding: 100px 0 60px;
     }
 
     .currently h2 {
@@ -529,11 +562,20 @@ footer {
         margin-top: 60px;
     }
 
-    .main-thought, .section, .currently, .projects, .social-section, .contact {
+    .main-thought,
+    .section,
+    .currently,
+    .projects,
+    .social-section,
+    .contact {
         padding: 80px 0;
     }
 
-    .main-thought h2, .about h2, .projects h2, .social-heading h2, .contact h2 {
+    .main-thought h2,
+    .about h2,
+    .projects h2,
+    .social-heading h2,
+    .contact h2 {
         font-size: 45px;
         letter-spacing: -2px;
     }
@@ -548,13 +590,19 @@ footer {
         flex-direction: column;
     }
 
-    .project, .social-card {
+    .project-list {
+        margin-top: 40px;
+    }
+
+    .project,
+    .social-card {
         grid-template-columns: 30px 1fr 20px;
         gap: 12px;
         padding: 24px 0;
     }
 
-    .project h3, .social-card h3 {
+    .project h3,
+    .social-card h3 {
         font-size: 23px;
     }
 
