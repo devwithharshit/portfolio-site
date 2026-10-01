@@ -80,6 +80,7 @@ nav a:hover {
     margin: 20px 0;
     font-size: 75px;
     line-height: 1;
+    animation: appear 1s ease;
 }
 
 em {
@@ -165,17 +166,17 @@ em {
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .card {
-    width: 31%;
     min-height: 170px;
     padding: 25px;
     border: 1px solid #ccc;
     background: white;
+    transition: 0.3s;
 }
 
 .card h3 {
@@ -293,20 +294,6 @@ footer {
 .footer a:hover {
     color: white;
     text-decoration: underline;
-}
-
-.card {
-    transition: 0.3s;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.hero h1 {
-    animation: appear 1s ease;
 }
 
 @keyframes appear {
