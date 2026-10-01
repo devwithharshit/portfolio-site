@@ -172,6 +172,7 @@ em {
 }
 
 .card {
+    width: 100%;
     min-height: 170px;
     padding: 25px;
     border: 1px solid #ccc;
