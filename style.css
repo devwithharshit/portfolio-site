@@ -294,3 +294,27 @@ footer {
     color: white;
     text-decoration: underline;
 }
+
+.card {
+    transition: 0.3s;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hero h1 {
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
